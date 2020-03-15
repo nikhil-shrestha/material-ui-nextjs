@@ -6,7 +6,6 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -16,6 +15,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+
+import Link from '../Link';
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -241,7 +242,7 @@ function Header(props) {
             key={`${route}${index}`}
             className={classes.tab}
             component={Link}
-            to={route.link}
+            href={route.link}
             label={route.name}
             aria-haspopup={route.ariaHaspopup}
             aria-owns={route.ariaOwns}
@@ -251,7 +252,7 @@ function Header(props) {
       </Tabs>
       <Button
         component={Link}
-        to="/estimate"
+        href="/estimate"
         variant="contained"
         color="secondary"
         className={classes.button}
@@ -280,7 +281,7 @@ function Header(props) {
               props.setValue(1);
             }}
             component={Link}
-            to={option.link}
+            href={option.link}
             classes={{
               root: classes.menuItem
             }}
@@ -313,7 +314,7 @@ function Header(props) {
               divider
               button
               component={Link}
-              to={route.link}
+              href={route.link}
               selected={value === route.activeIndex}
               classes={{
                 selected: classes.drawerItemSelected
@@ -333,7 +334,7 @@ function Header(props) {
             divider
             button
             component={Link}
-            to="/estimate"
+            href="/estimate"
             selected={value === 5}
             classes={{
               root: classes.drawerItemEstimate,
@@ -367,7 +368,7 @@ function Header(props) {
           <Toolbar disableGutters>
             <Button
               component={Link}
-              to="/"
+              href="/"
               disableRipple
               onClick={() => props.setValue(0)}
               className={classes.logoContainer}

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
+
+import Link from '../Link';
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -73,7 +74,7 @@ const Footer = props => {
                 onClick={() => {
                   props.setValue(0);
                 }}
-                to="/"
+                href="/"
                 className={classes.link}
               >
                 Home
@@ -89,7 +90,7 @@ const Footer = props => {
                   props.setValue(1);
                   props.setSelectedIndex(1);
                 }}
-                to="/services"
+                href="/services"
                 className={classes.link}
               >
                 Services
@@ -101,7 +102,7 @@ const Footer = props => {
                   props.setValue(1);
                   props.setSelectedIndex(1);
                 }}
-                to="/custom-software"
+                href="/custom-software"
                 className={classes.link}
               >
                 Custom Software Development
@@ -113,7 +114,7 @@ const Footer = props => {
                   props.setValue(1);
                   props.setSelectedIndex(2);
                 }}
-                to="/mobile-apps"
+                href="/mobile-apps"
                 className={classes.link}
               >
                 iOS/Android App Development
@@ -125,7 +126,7 @@ const Footer = props => {
                   props.setValue(1);
                   props.setSelectedIndex(3);
                 }}
-                to="/websites"
+                href="/websites"
                 className={classes.link}
               >
                 Website Development
@@ -140,18 +141,18 @@ const Footer = props => {
                 onClick={() => {
                   props.setValue(2);
                 }}
-                to="/revolution"
+                href="/revolution"
                 className={classes.link}
               >
                 The Revolution
               </Grid>
-              <Grid item component={Link} to="/" className={classes.link}>
+              <Grid item component={Link} href="/" className={classes.link}>
                 Vision
               </Grid>
-              <Grid item component={Link} to="/" className={classes.link}>
+              <Grid item component={Link} href="/" className={classes.link}>
                 Technology
               </Grid>
-              <Grid item component={Link} to="/" className={classes.link}>
+              <Grid item component={Link} href="/" className={classes.link}>
                 Process
               </Grid>
             </Grid>
@@ -164,15 +165,15 @@ const Footer = props => {
                 onClick={() => {
                   props.setValue(3);
                 }}
-                to="/about"
+                href="/about"
                 className={classes.link}
               >
                 About Us
               </Grid>
-              <Grid item component={Link} to="/" className={classes.link}>
+              <Grid item component={Link} href="/" className={classes.link}>
                 History
               </Grid>
-              <Grid item component={Link} to="/" className={classes.link}>
+              <Grid item component={Link} href="/" className={classes.link}>
                 Team
               </Grid>
             </Grid>
@@ -185,7 +186,7 @@ const Footer = props => {
                 onClick={() => {
                   props.setValue(4);
                 }}
-                to="/contact"
+                href="/contact"
                 className={classes.link}
               >
                 Contact Us

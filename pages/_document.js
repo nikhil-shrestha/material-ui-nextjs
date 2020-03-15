@@ -8,11 +8,17 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <meta charSet="utf-8" />
+          <link rel="icon" href="/favicon.png" />
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+          />
           {/* PWA primary color */}
           <meta name="theme-color" content={Theme.palette.primary.main} />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:100,400,400i,700|Roboto:300,400,500,700&display=swap"
           />
         </Head>
         <body>

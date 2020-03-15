@@ -86,7 +86,7 @@ const Services = props => {
             </Typography>
             <Button
               component={Link}
-              to="/mobile-apps"
+              href="/mobile-apps"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -136,7 +136,7 @@ const Services = props => {
             </Typography>
             <Button
               component={Link}
-              to="/custom-software"
+              href="/custom-software"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -185,7 +185,7 @@ const Services = props => {
             </Typography>
             <Button
               component={Link}
-              to="/websites"
+              href="/websites"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {

@@ -15,6 +15,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Hidden from '@material-ui/core/Hidden';
 
 import Link from '../Link';
 
@@ -220,7 +221,7 @@ function Header(props) {
           break;
 
         case '/estimate':
-          props.setValue(5);
+          if (props.value !== 5) props.setValue(5);
           break;
 
         default:
@@ -379,7 +380,8 @@ function Header(props) {
                 alt="company logo"
               />
             </Button>
-            {matches ? drawer : tabs}
+            <Hidden mdDown>{tabs}</Hidden>
+            <Hidden lgUp>{drawer}</Hidden>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
